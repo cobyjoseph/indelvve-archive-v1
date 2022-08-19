@@ -22,7 +22,7 @@
 	import PostHeaderDark from '../Components/PostHeaderDark.svelte';
 	import SortButtonDark from './SortButtonDark.svelte';
 	import SortButtonLight from './SortButtonLight.svelte';
-	import PostInputField from '../Components/postInputField.svelte';
+	import PostInputField from '../Components/PostInputField.svelte';
 	import postsStore from '../postsStore';
 	import AddChapBtnLight from './AddChapBtnLight.svelte';
 

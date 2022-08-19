@@ -1,7 +1,6 @@
 <script>
 	import postsStore from '../postsStore';
 
-	let posts;
 	let text;
 	let id;
 	let src;
@@ -24,7 +23,7 @@
 	}
 </script>
 
-<form action="/api.json" method="post" on:submit|preventDefault={addContent}>
+<form on:submit|preventDefault={addContent}>
 	<div class="grid grid-cols-1 rounded-sm">
 		<textarea
 			rows="5"
