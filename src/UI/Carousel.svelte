@@ -24,6 +24,7 @@
 	import SortButtonLight from './SortButtonLight.svelte';
 	import PostInputField from '../Components/postInputField.svelte';
 	import postsStore from '../postsStore';
+import AddChapBtnLight from './AddChapBtnLight.svelte';
 
 	let postHeight;
 
@@ -72,9 +73,9 @@ prev count: {lastCard}
 	<div class="m-3 overflow-hidden rounded-sm bg-mainLessDark px-3 pt-2 pb-[0.5px]">
 		<!-- Sort and add content group -->
 		<div class="flex gap-3">
-			<SortButtonDark />
+			<SortButtonLight />
 			<button on:click={togglePostInput}>
-				<AddChapBtn addText="content" />
+				<AddChapBtnLight addText="content" />
 			</button>
 		</div>
 
@@ -99,12 +100,12 @@ prev count: {lastCard}
 			</button>
 
 			<!-- Nav dots group -->
-			<div class="mx-12 flex h-[26px] items-center justify-center gap-1.5">
+			<div class="mx-12 flex h-[26px] items-center justify-center gap-1.5 ">
 				{#each posts as post (post.id)}
 					{#if currentCard + 1 === post.id}
-						<div class="h-[15px] w-[15px]  bg-primary" />
+						<div class="h-[15px] w-[15px]  bg-secondary rounded-sm" />
 					{:else}
-						<div class="h-[15px] w-[15px] bg-accent" />
+						<div class="h-[15px] w-[15px] bg-accent rounded-sm" />
 					{/if}
 				{/each}
 			</div>

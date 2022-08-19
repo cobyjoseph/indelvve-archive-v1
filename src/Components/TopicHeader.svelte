@@ -3,8 +3,8 @@
 	import SortButtonDark from '../UI/SortButtonDark.svelte';
 </script>
 
-<div class="mt-3 flex gap-3">
-	<svg
+<div class=" flex gap-2">
+	<!-- <svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="h-8 w-8 stroke-primary stroke-2"
 		fill="none"
@@ -17,11 +17,11 @@
 		/>
 	</svg>
 
-	<h1 class="font-fugaz text-3xl text-primary ">Urban design</h1>
+	<h1 class="font-fugaz text-3xl text-primary ">Urban design</h1> -->
 
 	<div class="grid grid-cols-1 place-items-center">
 		<SortButtonDark />
-	</div>
+	</div> 
 
 	<AddChapBtn addText="collection" />
 </div>

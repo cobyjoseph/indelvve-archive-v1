@@ -4,14 +4,16 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#027ed1',
+				primary: '#0096f4',
 				secondary: '#EDB280',
+				third: '#EDB280',
+				middle: '#e38c42',
 				accent: '#E8F0F6',
 				mainDark: '#4F5E87',
 				mainLessDark: '#566794',
 
 				body: '#E8F0F6',
-				lighterBody: '#f5f8fa',
+				lighterBody: '#f0f5fa',
 				lightestBody: '#ffffff',
 				grayHeader: '#5F6571',
 				faint: '#222937',
@@ -19,6 +21,7 @@ module.exports = {
 				darkTeal: '#5B6B8B',
 				postColor: '#ffffff',
 				mainText: '#222937',
+				mainGreen: '#81C4B4',
 				mainGray: '#676778'
 			},
 			fontFamily: {
@@ -29,7 +32,9 @@ module.exports = {
 	plugins: []
 };
 
-// purple as dark:
+// dark sand EDB280
+// slighty darker blue primary 027ed1
+// promising purple secondary 564bf2
 // mainDark:'#3F4FA2',
 // mainLessDark:'#4557B2',
 //old body FFE5D0

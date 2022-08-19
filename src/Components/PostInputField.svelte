@@ -33,7 +33,7 @@
 			bind:value={text}
 			on:input
 			placeholder="Add post"
-			class="mt-2 rounded-sm px-2 py-1 text-mainText outline outline-2 outline-primary"
+			class="mt-2 rounded-sm px-2 py-1 text-mainText  "
 		/>
 		<input type="text" name="idInput" bind:value={id} class="mt-1" />
 		<input type="text" name="srcInput" bind:value={src} class="mt-1" />
