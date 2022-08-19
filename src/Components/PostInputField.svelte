@@ -1,5 +1,5 @@
 <script>
-	import postsStore from '../postsStore';
+	import postsStore from '../postsStore.js';
 
 	let text;
 	let id;
