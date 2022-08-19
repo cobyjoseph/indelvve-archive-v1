@@ -20,6 +20,7 @@
 
 	import postsStore from '../postsStore.js';
 	import AddChapBtnLight from './AddChapBtnLight.svelte';
+	import PostInputField from '../Components/PostInputField.svelte';
 
 	$: direction = 'right';
 	$: currentCard = 0;
@@ -72,7 +73,7 @@ prev count: {lastCard}
 		</div>
 
 		{#if showInputContent}
-			<div transition:slide={{ duration: 300, easing: quintInOut }} />
+			<div transition:slide={{ duration: 300, easing: quintInOut }}><PostInputField /></div>
 		{/if}
 
 		<!-- Button group and nav dots group-->

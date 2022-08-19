@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 	import postsStore from '../postsStore.js';
 
 	let text;
@@ -42,4 +42,4 @@
 			</button>
 		</div>
 	</div>
-</form> -->
+</form>
