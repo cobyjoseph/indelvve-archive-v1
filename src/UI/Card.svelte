@@ -1,0 +1,22 @@
+<script>
+	let width;
+</script>
+
+<div class="mt-1 justify-center ">
+	<div class="relative mt-1 justify-center">
+		<!-- NOTE that I need to order this like this so the top one can be absolute and the bottom can be relative. That way the relative one will push down the content below, but the absolute one still works because it is not pushed down by the relative one.  -->
+		<div
+			class="pattern-dots absolute z-10 mt-[6.2px] -ml-[5.2px] h-auto w-full justify-center pt-1 pb-1 shadow-lg outline-dotted outline-[2.5px] outline-white "
+		>
+			<!-- REPLICATING THE CONTENT FROM THE MAIN DIV for the spacing of the outline. COME BACK TO THIS. PROBABLY A BETTER WAY TO DO IT -->
+			<slot name="bottomPost" />
+		</div>
+
+		<!-- a box that takes up 100% of its parent -->
+		<div
+			class="relative z-20 h-auto w-full justify-center rounded-[1px] bg-white pt-1 pb-1 shadow-lg outline outline-1 outline-primary  "
+		>
+			<slot name="topPost" />
+		</div>
+	</div>
+</div>
