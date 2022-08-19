@@ -1,7 +1,5 @@
 <script>
 	import Card from './Card.svelte';
-	import PostHeader from '../Components/PostHeaderDark.svelte';
-	import SortButton from './SortButtonLight.svelte';
 	import ChapTopicSentence from '../Components/ChapTopicSentence.svelte';
 	import { fade, fly, scale, slide } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
@@ -17,20 +15,14 @@
 	} from 'svelte/easing';
 	import { sineIn, sineOut } from 'svelte/easing';
 
-	import { subscribe } from 'svelte/internal';
-	import AddChapBtn from './AddChapBtn.svelte';
 	import PostHeaderDark from '../Components/PostHeaderDark.svelte';
-	import SortButtonDark from './SortButtonDark.svelte';
 	import SortButtonLight from './SortButtonLight.svelte';
-	import PostInputField from '../Components/PostInputField.svelte';
-	import postsStore from '../postsStore';
-	import AddChapBtnLight from './AddChapBtnLight.svelte';
 
-	let postHeight;
+	import postsStore from '../postsStore.js';
+	import AddChapBtnLight from './AddChapBtnLight.svelte';
 
 	$: direction = 'right';
 	$: currentCard = 0;
-	$: lastCard = 0;
 
 	let showInputContent = false;
 
@@ -80,9 +72,7 @@ prev count: {lastCard}
 		</div>
 
 		{#if showInputContent}
-			<div transition:slide={{ duration: 300, easing: quintInOut }}>
-				<PostInputField />
-			</div>
+			<div transition:slide={{ duration: 300, easing: quintInOut }} />
 		{/if}
 
 		<!-- Button group and nav dots group-->
@@ -144,7 +134,7 @@ prev count: {lastCard}
 			>
 				<Card>
 					<span slot="topPost">
-						<div bind:clientHeight={postHeight} class="py-2">
+						<div class="py-2">
 							<PostHeaderDark
 								upvotes="130"
 								authorName="Nicolas Bloom"
