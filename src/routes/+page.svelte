@@ -6,24 +6,16 @@
 	import postsStore from '../postsStore.js';
 	import { each } from 'svelte/internal';
 	import Topic from '../Components/Topic.svelte';
+	import { user } from '$lib/sessionStore';
+	import { supabase } from '$lib/supabaseClient';
+	import Auth from '$lib/Auth.svelte';
+	import Profile from '$lib/Profile.svelte';
 
-	export let apidata = [
-		{
-			id: 1,
-			text: ''
-		}
-	];
-	let text;
+	user.set(supabase.auth.user());
 
-	function addData() {
-		apidata = [
-			...apidata,
-			{
-				id: Math.random(),
-				text: text
-			}
-		];
-	}
+	supabase.auth.onAuthStateChange((_, session) => {
+		user.set(session.user);
+	});
 </script>
 
 <div class="flex flex-grow justify-center">
@@ -32,9 +24,16 @@
 	<main class="relative mb-6 mr-2 grid h-full w-3/4 max-w-[620px] grid-cols-1">
 		<SearchBar />
 
-        <Topic />
-        <TopicHeader />
-        
+		<!-- <div class="container" style="padding: 50px 0 100px 0;">
+			{#if $user}
+				<Profile />
+			{:else}
+				<Auth />
+			{/if}
+		</div> -->
+
+		<Topic />
+		<TopicHeader />
 
 		<Carousel postsArr={$postsStore} />
 		<Carousel postsArr={$postsStore} />

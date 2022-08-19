@@ -12,7 +12,7 @@
 		<div
 			class="absolute z-10 -ml-1 mt-1 h-7 w-[110px] outline-dotted   outline-[3px] outline-darkSand"
 		/>
-
+		
 		<!-- Each menu header with icon net to it -->
 		<div class="mt-4 grid grid-cols-1 gap-3">
 			<div class="flex items-center gap-1">
