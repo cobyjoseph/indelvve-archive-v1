@@ -6,7 +6,7 @@
 	export let commentNumber;
 </script>
 
-<div class="rounded-sm bg-mainLessDark px-1.5">
+<div class="rounded-lg bg-mainLessDark px-1.5">
 	<container class=" mb-1 flex text-[16px] text-white ">
 		<!-- light and number -->
 		<div class="gap-0.3 mr-5 flex">

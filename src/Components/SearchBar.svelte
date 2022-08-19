@@ -12,7 +12,7 @@
 		<!-- come back and add a search icon at some point -->
 
 		<div
-			class=" absolute  w-full h-full mt-[5px] -ml-[5px] z-10  bg-mainDark"
+			class=" absolute  w-full h-full mt-[5px] -ml-[5px] z-10  outline-2 outline-dotted"
 		/>
 	</div>
 	<!-- user image -->

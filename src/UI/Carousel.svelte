@@ -24,7 +24,7 @@
 	import SortButtonLight from './SortButtonLight.svelte';
 	import PostInputField from '../Components/postInputField.svelte';
 	import postsStore from '../postsStore';
-import AddChapBtnLight from './AddChapBtnLight.svelte';
+	import AddChapBtnLight from './AddChapBtnLight.svelte';
 
 	let postHeight;
 

@@ -3,15 +3,15 @@
 	<div class="mx-4 my-5 grid grid-cols-1">
 		<!-- =solid container-->
 		<div
-			class="z-20 flex h-7 w-[108px]  justify-center bg-lighterBody outline outline-1 outline-secondary"
+			class="z-20 flex h-7 w-[108px]  justify-center bg-body outline outline-[3px] outline-darkSand"
 		>
 			<!-- Logo text -->
-			<div class="-py-[0.5px] text-center font-fugaz text-[22px] text-transparent text-primary">
-				Indelvve
-			</div>
+			<div class="-py-[0.5px] text-center font-fugaz text-[22px]  text-secondary">Indelvve</div>
 		</div>
 		<!-- Logo shdadow box -->
-		<div class="absolute z-10 -ml-1 mt-1 h-7 w-[110px] bg-secondary" />
+		<div
+			class="absolute z-10 -ml-1 mt-1 h-7 w-[110px] outline-dotted   outline-[3px] outline-darkSand"
+		/>
 
 		<!-- Each menu header with icon net to it -->
 		<div class="mt-4 grid grid-cols-1 gap-3">

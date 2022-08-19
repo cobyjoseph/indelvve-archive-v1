@@ -5,18 +5,19 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: '#0096f4',
-				secondary: '#EDB280',
+				secondary: '#008DEB',
 				third: '#EDB280',
 				middle: '#e38c42',
 				accent: '#E8F0F6',
-				mainDark: '#4F5E87',
-				mainLessDark: '#566794',
+				mainDark: '#0d215c',
+				mainLessDark: '#0d2469',
 
 				body: '#E8F0F6',
 				lighterBody: '#f0f5fa',
 				lightestBody: '#ffffff',
 				grayHeader: '#5F6571',
 				faint: '#222937',
+				darkSand: '#EDB280',
 				darkBlue: '#052043',
 				darkTeal: '#5B6B8B',
 				postColor: '#ffffff',
@@ -51,3 +52,10 @@ module.exports = {
 // normal main blue 5B6B8B
 // normal main green 7AC1B5
 // normal faint 6D6767
+
+//viable option 1:
+// mainDark: '#4F5E87',
+// mainLessDark: '#566794',
+// primary: '#0096f4',
+// secondary: '#EDB280',
+// body: '#E8F0F6',

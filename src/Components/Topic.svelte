@@ -11,15 +11,15 @@
 	</h1>
 </div> -->
 
-<div class=" mb-4 relative pl-[4.5px] ">
+<div class=" mb-4 relative pl-[3.5px] ">
 	<div
-		class="peer relative text-3xl font-light text-primary  font-fugaz bg-lighterBody outline outline-2 outline-mainDark z-20 max-w-fit px-2 py-[2px] "
+		class="peer relative text-2xl font-light text-white  font-fugaz bg-secondary z-20 max-w-fit px-2 py-[2px] "
 	>
 		Urban transport
 	</div>
 
 	<div
-		class="absolute text-body text-3xl font-light  font-fugaz outline-[2.7px] outline-dotted outline-mainDark px-2  z-10 top-[5px] py-[2px]  left-0 max-w-fit"
+		class="absolute text-body text-2xl font-light  font-fugaz outline-[2.5px] outline-dotted outline-secondary px-2  z-10 top-[4px] py-[2px]  left-0 max-w-fit"
 	>
 		Urban transport
 	</div>
