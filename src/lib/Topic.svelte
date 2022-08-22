@@ -1,6 +1,4 @@
-<script>
-	import Card from '../UI/Card.svelte';
-</script>
+
 
 <!-- <div class="mt-1 flex bg-sec">
 	<h1 class="text-4xl font-bold text-grayHeader -mt-1">#</h1>

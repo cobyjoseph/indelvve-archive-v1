@@ -1,6 +1,6 @@
 <script>
-	import Card from './Card.svelte';
-	import ChapTopicSentence from '../Components/ChapTopicSentence.svelte';
+	import Card from '$lib/Card.svelte';
+	import CollectionHeader from '$lib/CollectionHeader.svelte';
 	import { fade, fly, scale, slide } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 	import {
@@ -15,12 +15,12 @@
 	} from 'svelte/easing';
 	import { sineIn, sineOut } from 'svelte/easing';
 
-	import PostHeaderDark from '../Components/PostHeaderDark.svelte';
-	import SortButtonLight from './SortButtonLight.svelte';
+	import PostHeaderDark from '$lib/PostHeaderDark.svelte';
+	import SortButtonLight from '$lib/SortButtonLight.svelte';
 
 	import postsStore from '../postsStore.js';
-	import AddChapBtnLight from './AddChapBtnLight.svelte';
-	import PostInputField from '../Components/PostInputField.svelte';
+	import AddCollectionBtnLight from '$lib/AddCollectionBtnLight.svelte';
+	import PostInputField from '$lib/PostInputField.svelte';
 
 	$: direction = 'right';
 	$: currentCard = 0;
@@ -60,7 +60,7 @@ prev count: {lastCard}
 
 <div class=" mt-2 mb-2 rounded-lg bg-mainDark shadow-lg">
 	<div class="px-5 pt-3">
-		<ChapTopicSentence />
+		<CollectionHeader />
 	</div>
 
 	<div class="m-3 overflow-hidden rounded-sm bg-mainLessDark px-3 pt-2 pb-[0.5px]">
@@ -68,7 +68,7 @@ prev count: {lastCard}
 		<div class="flex gap-3">
 			<SortButtonLight />
 			<button on:click={togglePostInput}>
-				<AddChapBtnLight addText="content" />
+				<AddCollectionBtnLight addText="content" />
 			</button>
 		</div>
 
@@ -94,9 +94,9 @@ prev count: {lastCard}
 			<div class="mx-12 flex h-[26px] items-center justify-center gap-1.5 ">
 				{#each posts as post (post.id)}
 					{#if currentCard + 1 === post.id}
-						<div class="h-[15px] w-[15px]  bg-secondary rounded-sm" />
+						<div class="h-[15px] w-[15px]  rounded-sm bg-secondary" />
 					{:else}
-						<div class="h-[15px] w-[15px] bg-accent rounded-sm" />
+						<div class="h-[15px] w-[15px] rounded-sm bg-accent" />
 					{/if}
 				{/each}
 			</div>

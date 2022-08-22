@@ -1,6 +1,6 @@
 <script>
-	import AddChapBtn from '../UI/AddChapBtn.svelte';
-	import SortButtonDark from '../UI/SortButtonDark.svelte';
+	import AddCollectionBtn from '$lib/AddCollectionBtn.svelte';
+	import SortButtonDark from '$lib/SortButtonDark.svelte';
 </script>
 
 <div class=" flex gap-2">
@@ -21,7 +21,7 @@
 
 	<div class="grid grid-cols-1 place-items-center">
 		<SortButtonDark />
-	</div> 
+	</div>
 
-	<AddChapBtn addText="collection" />
+	<AddCollectionBtn addText="collection" />
 </div>

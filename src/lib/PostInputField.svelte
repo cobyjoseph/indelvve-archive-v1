@@ -1,6 +1,7 @@
 <script>
 	import postsStore from '../postsStore.js';
 
+	let posts;
 	let text;
 	let id;
 	let src;

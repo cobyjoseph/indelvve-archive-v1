@@ -9,8 +9,8 @@ module.exports = {
 				third: '#EDB280',
 				middle: '#e38c42',
 				accent: '#E8F0F6',
-				mainDark: '#0d215c',
-				mainLessDark: '#0d2469',
+				mainDark: '#2c3578',
+				mainLessDark: '#333c82',
 
 				body: '#E8F0F6',
 				lighterBody: '#f0f5fa',
