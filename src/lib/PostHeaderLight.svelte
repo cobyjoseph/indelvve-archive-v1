@@ -6,13 +6,13 @@
 	export let commentNumber;
 </script>
 
-<div class="rounded-lg bg-mainLessDark px-1.5">
-	<container class=" mb-1 flex text-[16px] text-white ">
+<div class=" bg-body px-1.5 outline outline-1 outline-black">
+	<container class=" mb-1 flex text-[16px] text-black ">
 		<!-- light and number -->
 		<div class="gap-0.3 mr-5 flex">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-[23px] w-[23px] fill-transparent stroke-white stroke-1 hover:fill-white"
+				class="h-[23px] w-[23px] fill-transparent stroke-black stroke-1 hover:fill-white"
 				viewBox="0 0 24 24"
 			>
 				<path
@@ -29,7 +29,7 @@
 		<div class="mr-5 flex gap-0.5">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="mb-1 h-[19px] w-[19px] place-self-center stroke-white stroke-1"
+				class="mb-1 h-[19px] w-[19px] place-self-center stroke-black stroke-1"
 				fill="none"
 				viewBox="0 0 24 24"
 			>
@@ -52,7 +52,7 @@
 		<div class="min-w relative ml-auto flex gap-1">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-[27px] w-[27px] place-self-center stroke-white stroke-1"
+				class="h-[27px] w-[27px] place-self-center stroke-black stroke-1"
 				fill="none"
 				viewBox="0 0 24 24"
 			>

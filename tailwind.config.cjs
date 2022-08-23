@@ -5,7 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: '#0096f4',
-				secondary: '#008DEB',
+				secondary: '#7C8DBA',
 				third: '#EDB280',
 				middle: '#e38c42',
 				accent: '#E8F0F6',
@@ -17,7 +17,7 @@ module.exports = {
 				lightestBody: '#ffffff',
 				grayHeader: '#5F6571',
 				faint: '#222937',
-				darkSand: '#EDB280',
+				darkSand: '#5b66ba',
 				darkBlue: '#052043',
 				darkTeal: '#5B6B8B',
 				postColor: '#ffffff',

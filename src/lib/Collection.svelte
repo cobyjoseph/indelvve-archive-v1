@@ -59,12 +59,12 @@
 prev count: {lastCard}
 {direction} -->
 
-<div class=" mt-2 mb-2 rounded-lg bg-mainDark shadow-lg">
+<div class=" mt-4 mb-2 bg-[#d1ebed] outline  outline-[2.5px] outline-black">
 	<div class="px-5 pt-3">
 		<CollectionHeader />
 	</div>
 
-	<div class="m-3 overflow-hidden rounded-sm bg-mainLessDark px-3 pt-2 pb-[0.5px]">
+	<div class="mx-3 overflow-hidden rounded-sm  px-3 pt-2 pb-[0.5px]">
 		<!-- Sort and add content group -->
 		<div class="flex gap-3">
 			<SortButtonLight />
@@ -76,44 +76,6 @@ prev count: {lastCard}
 		{#if showInputContent}
 			<div transition:slide={{ duration: 300, easing: quintInOut }}><PostInputField /></div>
 		{/if}
-
-		<!-- Button group and nav dots group-->
-		<div class="mt-2 flex transform justify-between ">
-			<!-- Button left  -->
-			<button on:click={prevCard}>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-[26px] w-[26px] justify-center stroke-white stroke-[3px]"
-					fill="none"
-					viewBox="0 0 24 24"
-				>
-					<path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-				</svg>
-			</button>
-
-			<!-- Nav dots group -->
-			<div class="mx-12 flex h-[26px] items-center justify-center gap-1.5 ">
-				{#each posts as post (post.id)}
-					{#if currentCard + 1 === post.id}
-						<div class="h-[15px] w-[15px]  rounded-sm bg-secondary" />
-					{:else}
-						<div class="h-[15px] w-[15px] rounded-sm bg-accent" />
-					{/if}
-				{/each}
-			</div>
-
-			<!-- Button right -->
-			<button on:click={nextCard}>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-[26px] w-[26px] justify-center stroke-white stroke-[3px]"
-					fill="none"
-					viewBox="0 0 24 24"
-				>
-					<path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-				</svg>
-			</button>
-		</div>
 
 		{#each [posts[currentCard]] as post (post.id)}
 			<div
@@ -132,7 +94,7 @@ prev count: {lastCard}
 					delay: 200,
 					easing: quintOut
 				}}
-				class="mt-2 mb-4 "
+				class="mt-3 mb-4 "
 			>
 				<Card>
 					<span slot="topPost">
@@ -174,5 +136,43 @@ prev count: {lastCard}
 				</Card>
 			</div>
 		{/each}
+
+		<!-- Button group and nav dots group-->
+		<div class="mb-3 flex transform justify-between ">
+			<!-- Button left  -->
+			<button on:click={prevCard}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-[26px] w-[26px] justify-center stroke-black stroke-[3px]"
+					fill="none"
+					viewBox="0 0 24 24"
+				>
+					<path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+				</svg>
+			</button>
+
+			<!-- Nav dots group -->
+			<div class="mx-12 flex h-[26px] items-center justify-center gap-1.5 ">
+				{#each posts as post (post.id)}
+					{#if currentCard + 1 === post.id}
+						<div class="h-[15px] w-[15px]  rounded-sm bg-darkSand" />
+					{:else}
+						<div class="h-[15px] w-[15px] rounded-sm bg-white" />
+					{/if}
+				{/each}
+			</div>
+
+			<!-- Button right -->
+			<button on:click={nextCard}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-[26px] w-[26px] justify-center stroke-black stroke-[3px]"
+					fill="none"
+					viewBox="0 0 24 24"
+				>
+					<path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+				</svg>
+			</button>
+		</div>
 	</div>
 </div>

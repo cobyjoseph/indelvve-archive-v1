@@ -4,7 +4,7 @@
 
 
 <div class="flex justify-center items-center">
-    <div class="flex justify-center items-center   gap-2 px-2  rounded-sm bg-accent">
+    <div class="flex justify-center items-center   gap-2 px-2 outline outline-1 outline-black   bg-white">
             <div class="text-mainText font-medium">
                 Sort    
             </div>

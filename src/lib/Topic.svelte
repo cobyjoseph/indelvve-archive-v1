@@ -9,16 +9,20 @@
 	</h1>
 </div> -->
 
-<div class=" mb-4 relative pl-[3.5px] ">
+<div class=" relative mt-3  ">
 	<div
-		class="peer relative text-2xl font-light text-white  font-fugaz bg-secondary z-20 max-w-fit px-2 py-[2px] "
+		class="peer relative text-2xl font-semibold text-black  z-20 max-w-fit py-[3px]  "
 	>
 		Urban transport
 	</div>
 
 	<div
-		class="absolute text-body text-2xl font-light  font-fugaz outline-[2.5px] outline-dotted outline-secondary px-2  z-10 top-[4px] py-[2px]  left-0 max-w-fit"
+		class="absolute text-body text-xl font-semibold px-4  z-10 top-[4px] py-[3px]  left-0 max-w-fit"
 	>
 		Urban transport
 	</div>
+</div>
+
+<div class="bg-black h-[0.5px] w-full mb-3 mt-1">
+
 </div>

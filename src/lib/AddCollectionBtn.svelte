@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex items-center justify-center">
-	<div class="flex items-center justify-center gap-1  rounded-sm bg-mainDark px-1.5">
+	<div class="flex items-center justify-center gap-1   bg-white px-1.5  outline-1 outline">
 		<div class="flex justify-center self-center rounded-sm  bg-mainDark">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -14,6 +14,6 @@
 				<path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
 			</svg>
 		</div>
-		<div class=" font-medium text-white">Add {addText}</div>
+		<div class=" font-medium text-black">Add {addText}</div>
 	</div>
 </div>
