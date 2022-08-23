@@ -1,15 +1,14 @@
 import { writable } from 'svelte/store';
-import { supabase } from './lib/supabaseClient.js';
+import { supabase } from '$lib/supabase.js';
 
-export const postsStore = writable([{}]);
+export const postsStore = writable([
+	{
+		id: 1,
+		text: 'FIRST post text FIRST post textFIRST post textFIRST post textFIRST post textFIRST post textFIRST post textFIRST post textFIRST post textFIRST post textFIRST post textFIRST post text',
+		src: 'https://www.statista.com/graphic/1/1122987/change-in-remote-work-trends-after-covid-in-usa.jpg'
+	}
+]);
 
-export const name = writable('Svelte');
-
-export const addPost = () => {
-	supabase.from('postsTable').select;
-};
-
-export default postsStore;
 
 // {
 // 	id: 1,

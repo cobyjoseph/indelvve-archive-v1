@@ -18,9 +18,10 @@
 	import PostHeaderDark from '$lib/PostHeaderDark.svelte';
 	import SortButtonLight from '$lib/SortButtonLight.svelte';
 
-	import postsStore from '../postsStore.js';
+	import { postsStore } from '../postsStore.js';
 	import AddCollectionBtnLight from '$lib/AddCollectionBtnLight.svelte';
 	import PostInputField from '$lib/PostInputField.svelte';
+	import { supabase } from '$lib/supabase.js';
 
 	$: direction = 'right';
 	$: currentCard = 0;
@@ -135,7 +136,7 @@ prev count: {lastCard}
 			>
 				<Card>
 					<span slot="topPost">
-						<div class="py-2">
+						<div class="pt-2">
 							<PostHeaderDark
 								upvotes="130"
 								authorName="Nicolas Bloom"
@@ -147,7 +148,7 @@ prev count: {lastCard}
 							<div class="px-6 text-mainText ">
 								{post.text}
 							</div>
-							<div class="mt-2">
+							<div class="mt-2 pb-2">
 								<img src={post.src} alt="" />
 							</div>
 						</div>

@@ -1,6 +1,6 @@
 <script>
-	import { supabase } from '$lib/supabaseClient';
-	import { user } from '$lib/sessionStore';
+	import { supabase } from '$lib/supabase.js';
+	import { user } from '$lib/sessionStore.js';
 
 	let loading = true;
 	let username = null;
@@ -87,7 +87,7 @@
 	<div>
 		<input
 			type="submit"
-			class="button block primary"
+			class="button primary block"
 			value={loading ? 'Loading' : 'Update'}
 			disabled={loading}
 		/>

@@ -1,5 +1,6 @@
 <script>
-	import postsStore from '../postsStore.js';
+	import { postsStore } from '../postsStore.js';
+	import { supabase } from '$lib/supabase.js';
 
 	let posts;
 	let text;
@@ -9,6 +10,8 @@
 	postsStore.subscribe((value) => {
 		posts = value;
 	});
+
+	
 
 	function addContent() {
 		postsStore.update((posts) => {
