@@ -1,6 +1,38 @@
 import { writable } from 'svelte/store';
 import { supabase } from '$lib/supabase.js';
 
+export const posts = writable([]);
+
+export const loadPosts = async () => {
+	const { data, error } = await supabase.from('posts').select();
+	if (error) {
+		return console.error(error);
+	}
+	posts.set(data);
+};
+loadPosts();
+
+export const addPost = async (text, user_id = 'text') => {
+	const { data, error } = await supabase.from('posts').insert([{ text, user_id }]);
+
+	if (error) {
+		return console.error(error);
+	}
+	posts.update((cur) => {
+		const newPosts = [...cur, data[0]];
+		return newPosts;
+	});
+};
+
+export const deletePosts = async (id) => {
+	const { error } = await supabase.from('posts').delete().match({ id });
+
+	if (error) {
+		return console.error(error);
+	}
+	posts.update((posts) => posts.filter((post) => post.id !== id));
+};
+
 export const postsStore = writable([
 	{
 		id: 1,

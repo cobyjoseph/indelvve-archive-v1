@@ -17,12 +17,12 @@
 	</div>
 
 	<div
-		class="absolute text-body text-xl font-semibold px-4  z-10 top-[4px] py-[3px]  left-0 max-w-fit"
+		class="absolute text-white text-xl font-semibold px-4  z-10 top-[4px] py-[3px]  left-0 max-w-fit text-transparent"
 	>
 		Urban transport
 	</div>
 </div>
 
-<div class="bg-black h-[0.5px] w-full mb-3 mt-1">
+<div class="bg-secondary h-[0.5px] w-full mb-3 mt-1">
 
 </div>

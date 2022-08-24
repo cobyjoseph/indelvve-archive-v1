@@ -5,19 +5,20 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: '#0096f4',
-				secondary: '#7C8DBA',
+				secondary: '#1f77f2',
 				third: '#EDB280',
 				middle: '#e38c42',
 				accent: '#E8F0F6',
 				mainDark: '#363e69',
 				mainLessDark: '#384275',
+				boxBackground: '#c0d8fa',
 
-				body: '#E8F0F6',
+				body: '#ffffff',
 				lighterBody: '#f0f5fa',
 				lightestBody: '#ffffff',
 				grayHeader: '#5F6571',
 				faint: '#222937',
-				darkSand: '#5b66ba',
+				darkSand: '#EDB280',
 				darkBlue: '#052043',
 				darkTeal: '#5B6B8B',
 				postColor: '#ffffff',
@@ -33,6 +34,7 @@ module.exports = {
 	plugins: []
 };
 
+// light green retro d1ebed
 // dark sand EDB280
 // slighty darker blue primary 027ed1
 // promising purple secondary 564bf2

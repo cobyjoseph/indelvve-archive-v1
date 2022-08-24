@@ -1,4 +1,4 @@
-import supabase from '$lib/supabase.js';
+import { supabase } from '$lib/supabase.js';
 
 export function getUser() {
 	return supabase.auth.user();
@@ -12,4 +12,9 @@ export async function signIn({ email }) {
 export async function signOut() {
 	const { error } = await supabase.auth.signOut();
 	return { data: !error, error };
+}
+
+export async function createPost({ content, user }) {
+	const { data, error } = await supabase.from('posts').insert({ content, user });
+	return { data, error };
 }

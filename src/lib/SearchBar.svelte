@@ -6,13 +6,13 @@
 		<input
 			type="text"
 			placeholder="Search topics, chapters, posts, and people"
-			class="peer z-40 outline outline-3 absolute outline-mainDark bg-white w-full h-full  placeholder-faint px-2 focus:placeholder-[#c4c0c0] focus:outline-mainDark"
+			class="peer z-40 outline outline-2 absolute outline-mainDark bg-white w-full h-full  placeholder-faint px-2 focus:placeholder-[#c4c0c0] focus:outline-mainDark"
 		/>
 
 		<!-- come back and add a search icon at some point -->
 
 		<div
-			class=" absolute  w-full h-full mt-[5px] -ml-[5px] z-10  outline-3 outline-dotted"
+			class=" absolute  w-full h-full mt-[5px] -ml-[5px] z-10  outline-2 outline-dotted"
 		/>
 	</div>
 	<!-- user image -->

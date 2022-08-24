@@ -18,7 +18,7 @@
 	import PostHeaderDark from '$lib/PostHeaderDark.svelte';
 	import SortButtonLight from '$lib/SortButtonLight.svelte';
 
-	import { postsStore } from '../postsStore.js';
+	import { postsStore } from './stores/postsStore.js';
 	import AddCollectionBtnLight from '$lib/AddCollectionBtnLight.svelte';
 	import PostInputField from '$lib/PostInputField.svelte';
 	import { supabase } from '$lib/supabase.js';
@@ -59,7 +59,7 @@
 prev count: {lastCard}
 {direction} -->
 
-<div class=" mt-4 mb-2 bg-[#d1ebed] outline  outline-[2.5px] outline-black">
+<div class=" mt-4 mb-2 bg-boxBackground  shadow-xl outline outline-1 outline-black">
 	<div class="px-5 pt-3">
 		<CollectionHeader />
 	</div>
@@ -155,7 +155,7 @@ prev count: {lastCard}
 			<div class="mx-12 flex h-[26px] items-center justify-center gap-1.5 ">
 				{#each posts as post (post.id)}
 					{#if currentCard + 1 === post.id}
-						<div class="h-[15px] w-[15px]  rounded-sm bg-darkSand" />
+						<div class="h-[15px] w-[15px]  rounded-sm bg-secondary" />
 					{:else}
 						<div class="h-[15px] w-[15px] rounded-sm bg-white" />
 					{/if}

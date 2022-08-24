@@ -3,13 +3,16 @@
 	import SearchBar from '$lib/SearchBar.svelte';
 	import TopicHeader from '$lib/TopicHeader.svelte';
 	import Collection from '$lib/Collection.svelte';
-	import { postsStore } from '../postsStore.js';
+	import { postsStore } from '../lib/stores/postsStore.js';
 	import { each } from 'svelte/internal';
 	import Topic from '$lib/Topic.svelte';
 	import { user } from '$lib/sessionStore';
 	import { supabase } from '$lib/supabase.js';
-	import Auth from '$lib/Auth.svelte';
+
 	import Profile from '$lib/Profile.svelte';
+	import { isOverlayOpen } from '../lib/stores/LoginStore.js';
+	import LoginOverlay from '$lib/LoginOverlay.svelte';
+	import CreatePost from '$lib/CreatePost.svelte';
 
 	user.set(supabase.auth.user());
 
@@ -18,6 +21,7 @@
 	});
 
 	let testPost;
+	let showSignup = false;
 </script>
 
 <!-- <div class="container" style="padding: 50px 0 100px 0;">
@@ -33,6 +37,11 @@
 
 	<main class=" relative mb-6 mr-2 grid h-full w-3/4 max-w-[620px] grid-cols-1">
 		<SearchBar />
+
+		<CreatePost />
+		{#if $isOverlayOpen}
+			<LoginOverlay />
+		{/if}
 
 		<!-- <div class="container" style="padding: 50px 0 100px 0;">
 			{#if $user}
