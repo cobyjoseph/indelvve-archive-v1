@@ -26,6 +26,8 @@
 	$: direction = 'right';
 	$: currentCard = 0;
 
+	let collectionHeight;
+
 	let showInputContent = false;
 
 	// Getting the data from the postsStore the long way so that I can access it's array lnngth
@@ -53,13 +55,21 @@
 	}
 </script>
 
-<!-- ____________________________________________________________________________________________________ -->
-
 <!-- current count: {currentCard}
 prev count: {lastCard}
 {direction} -->
 
-<div class=" mt-4 mb-2 bg-boxBackground  shadow-xl outline outline-1 outline-black">
+<div class="relative">
+
+
+
+<!-- Collection dotted outline -->
+<div style="--collectionHeight: {collectionHeight}" class=" absolute z-10 dottedOutline h-10 bg-secondary w-full transform -translate-x-2 mt-4 translate-y-2 bg-opacity-50"></div>
+
+<div
+	bind:clientHeight={collectionHeight}
+	class=" mt-4 mb-2 bg-boxBackground   z-40"
+>
 	<div class="px-5 pt-3">
 		<CollectionHeader />
 	</div>
@@ -176,3 +186,13 @@ prev count: {lastCard}
 		</div>
 	</div>
 </div>
+
+</div>
+
+<!-- ____________________________________________________________________________________________________ -->
+<style>
+	.dottedOutline {
+		--collectionHeight: 50;
+		height: calc(var(--collectionHeight) * 1px);
+	}
+</style>
