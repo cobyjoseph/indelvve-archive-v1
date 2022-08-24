@@ -3,13 +3,13 @@
 	export let authorName;
 	export let timeSince;
 	export let dOrMin;
-	export let commentNumber;
+	// export let commentNumber;
 </script>
 
-<div class="mx-5 rounded-sm bg-body px-1.5 outline outline-1 outline-black">
-	<container class=" mb-1 flex text-[16px] text-faint ">
+<div class="mx-5   ">
+	<container class=" mb-1 flex text-[16px] text-faint items-center ">
 		<!-- light and number -->
-		<div class="gap-0.3 mr-5 flex">
+		<div class="gap-0.3 mr-5 flex ">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="h-[23px] w-[23px] fill-transparent stroke-faint stroke-1 hover:fill-faint"
@@ -26,10 +26,10 @@
 		</div>
 
 		<!-- person icon and name - I NEEDED TO place self center for the icon. didnt seem to work when I tried to apply that to the praent. not sure why -->
-		<div class="mr-5 flex gap-0.5">
+		<div class="mr-5 flex gap-0.5 items-center">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="mb-1 h-[19px] w-[19px] place-self-center stroke-faint stroke-1"
+				class="h-[19px] w-[19px] place-self-center stroke-faint stroke-1"
 				fill="none"
 				viewBox="0 0 24 24"
 			>
@@ -43,13 +43,13 @@
 		</div>
 
 		<!-- number and d or minute -->
-		<div class="gap-0.3 mr-5 flex">
+		<div class="gap-0.3 mr-5 flex items-center">
 			<div>{timeSince}</div>
 			<div>{dOrMin}</div>
 		</div>
 
 		<!-- Comment icon with number inside -->
-		<div class="min-w relative ml-auto flex gap-1">
+		<div class="min-w relative ml-auto flex gap-1 items-center">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="h-[27px] w-[27px] place-self-center stroke-faint stroke-1"
@@ -62,9 +62,9 @@
 					d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z "
 				/>
 			</svg>
-			<div class="absolute inset-y-[4.5px] inset-x-[8px] text-[11px] font-semibold">
+			<!-- <div class="absolute inset-y-[4.5px] inset-x-[8px] text-[11px] font-semibold">
 				{commentNumber}
-			</div>
+			</div> -->
 		</div>
 	</container>
 </div>

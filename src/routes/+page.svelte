@@ -32,13 +32,13 @@
 	{/if}
 </div> -->
 
-<div class="flex flex-grow justify-center">
+<div class="flex flex-grow justify-center ">
 	<Navbar />
 
-	<main class=" relative mb-6 mr-2 grid h-full w-3/4 max-w-[620px] grid-cols-1">
+	<main class=" relative mx-4 mb-6 grid h-full grid-cols-1 md:w-3/4 md:max-w-[620px] ">
 		<SearchBar />
 
-		<CreatePost />
+		<!-- <CreatePost /> -->
 		{#if $isOverlayOpen}
 			<LoginOverlay />
 		{/if}

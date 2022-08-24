@@ -60,133 +60,129 @@ prev count: {lastCard}
 {direction} -->
 
 <div class="relative">
+	<!-- Collection dotted outline -->
+	<div
+		style="--collectionHeight: {collectionHeight}"
+		class=" dottedOutline absolute z-10 mt-4 h-10 w-full -translate-x-2 translate-y-2 transform bg-secondary bg-opacity-50"
+	/>
 
-
-
-<!-- Collection dotted outline -->
-<div style="--collectionHeight: {collectionHeight}" class=" absolute z-10 dottedOutline h-10 bg-secondary w-full transform -translate-x-2 mt-4 translate-y-2 bg-opacity-50"></div>
-
-<div
-	bind:clientHeight={collectionHeight}
-	class=" mt-4 mb-2 bg-boxBackground   z-40"
->
-	<div class="px-5 pt-3">
-		<CollectionHeader />
-	</div>
-
-	<div class="mx-3 overflow-hidden rounded-sm  px-3 pt-2 pb-[0.5px]">
-		<!-- Sort and add content group -->
-		<div class="flex gap-3">
-			<SortButtonLight />
-			<button on:click={togglePostInput}>
-				<AddCollectionBtnLight addText="content" />
-			</button>
+	<div bind:clientHeight={collectionHeight} class=" z-40 mt-4 mb-2   bg-boxBackground">
+		<div class="px-5 pt-3">
+			<CollectionHeader />
 		</div>
 
-		{#if showInputContent}
-			<div transition:slide={{ duration: 300, easing: quintInOut }}><PostInputField /></div>
-		{/if}
-
-		{#each [posts[currentCard]] as post (post.id)}
-			<div
-				in:fly={{
-					delay: 0,
-					duration: direction === 'right' ? 300 : 300,
-					x: direction === 'right' ? 100 : -100,
-					easing: sineIn
-				}}
-				out:fly={{
-					duration: 400,
-					x: direction === 'right' ? -100 : 100,
-					easing: sineOut
-				}}
-				animate:flip={{
-					delay: 200,
-					easing: quintOut
-				}}
-				class="mt-3 mb-4 "
-			>
-				<Card>
-					<span slot="topPost">
-						<div class="pt-2">
-							<PostHeaderDark
-								upvotes="130"
-								authorName="Nicolas Bloom"
-								timeSince="34"
-								dOrMin="d"
-								commentNumber="12"
-							/>
-
-							<div class="px-6 text-mainText ">
-								{post.text}
-							</div>
-							<div class="mt-2 pb-2">
-								<img src={post.src} alt="" />
-							</div>
-						</div>
-					</span>
-
-					<span slot="bottomPost">
-						<div class="py-2">
-							<PostHeaderDark
-								upvotes="130"
-								authorName="Nicolas Bloom"
-								timeSince="34"
-								dOrMin="d"
-								commentNumber="12"
-							/>
-							<div class="px-6">
-								{post.text}
-							</div>
-							<div class="mt-2 opacity-0">
-								<img src={post.src} alt="" />
-							</div>
-						</div>
-					</span>
-				</Card>
-			</div>
-		{/each}
-
-		<!-- Button group and nav dots group-->
-		<div class="mb-3 flex transform justify-between ">
-			<!-- Button left  -->
-			<button on:click={prevCard}>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-[26px] w-[26px] justify-center stroke-black stroke-[3px]"
-					fill="none"
-					viewBox="0 0 24 24"
-				>
-					<path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-				</svg>
-			</button>
-
-			<!-- Nav dots group -->
-			<div class="mx-12 flex h-[26px] items-center justify-center gap-1.5 ">
-				{#each posts as post (post.id)}
-					{#if currentCard + 1 === post.id}
-						<div class="h-[15px] w-[15px]  rounded-sm bg-secondary" />
-					{:else}
-						<div class="h-[15px] w-[15px] rounded-sm bg-white" />
-					{/if}
-				{/each}
+		<div class="mx-1 overflow-hidden rounded-sm px-3  pt-2 pb-[0.5px] md:mx-3">
+			<!-- Sort and add content group -->
+			<div class="flex gap-3">
+				<SortButtonLight />
+				<button on:click={togglePostInput}>
+					<AddCollectionBtnLight addText="content" />
+				</button>
 			</div>
 
-			<!-- Button right -->
-			<button on:click={nextCard}>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-[26px] w-[26px] justify-center stroke-black stroke-[3px]"
-					fill="none"
-					viewBox="0 0 24 24"
+			{#if showInputContent}
+				<div transition:slide={{ duration: 300, easing: quintInOut }}><PostInputField /></div>
+			{/if}
+
+			{#each [posts[currentCard]] as post (post.id)}
+				<div
+					in:fly={{
+						delay: 0,
+						duration: direction === 'right' ? 300 : 300,
+						x: direction === 'right' ? 100 : -100,
+						easing: sineIn
+					}}
+					out:fly={{
+						duration: 400,
+						x: direction === 'right' ? -100 : 100,
+						easing: sineOut
+					}}
+					animate:flip={{
+						delay: 200,
+						easing: quintOut
+					}}
+					class="mt-3 mb-4 "
 				>
-					<path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-				</svg>
-			</button>
+					<Card>
+						<span slot="topPost">
+							<div class="pt-2">
+								<PostHeaderDark
+									upvotes="130"
+									authorName="Nicolas Bloom"
+									timeSince="34"
+									dOrMin="d"
+									commentNumber="12"
+								/>
+
+								<div class="px-6 text-mainText ">
+									{post.text}
+								</div>
+								<div class="mt-2 pb-2">
+									<img src={post.src} alt="" />
+								</div>
+							</div>
+						</span>
+
+						<span slot="bottomPost">
+							<div class="py-2">
+								<PostHeaderDark
+									upvotes="130"
+									authorName="Nicolas Bloom"
+									timeSince="34"
+									dOrMin="d"
+									commentNumber="12"
+								/>
+								<div class="px-6">
+									{post.text}
+								</div>
+								<div class="mt-2 opacity-0">
+									<img src={post.src} alt="" />
+								</div>
+							</div>
+						</span>
+					</Card>
+				</div>
+			{/each}
+
+			<!-- Button group and nav dots group-->
+			<div class="mb-3 flex transform justify-between ">
+				<!-- Button left  -->
+				<button on:click={prevCard}>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-[26px] w-[26px] justify-center stroke-black stroke-[3px]"
+						fill="none"
+						viewBox="0 0 24 24"
+					>
+						<path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+					</svg>
+				</button>
+
+				<!-- Nav dots group -->
+				<div class="mx-12 flex h-[26px] items-center justify-center gap-1.5 ">
+					{#each posts as post (post.id)}
+						{#if currentCard + 1 === post.id}
+							<div class="h-[15px] w-[15px]  rounded-sm bg-secondary" />
+						{:else}
+							<div class="h-[15px] w-[15px] rounded-sm bg-white" />
+						{/if}
+					{/each}
+				</div>
+
+				<!-- Button right -->
+				<button on:click={nextCard}>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-[26px] w-[26px] justify-center stroke-black stroke-[3px]"
+						fill="none"
+						viewBox="0 0 24 24"
+					>
+						<path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+					</svg>
+				</button>
+			</div>
 		</div>
 	</div>
-</div>
-
 </div>
 
 <!-- ____________________________________________________________________________________________________ -->

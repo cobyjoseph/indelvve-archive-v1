@@ -2,24 +2,21 @@
 	import { isOverlayOpen } from './stores/LoginStore.js';
 </script>
 
-{$isOverlayOpen}
-<div class="mr-4 w-[160px]">
+<div class="mr-6 hidden w-[130px] md:block">
 	<!-- contents of nav bar -->
-	<div class="mx-4 my-5 grid grid-cols-1">
+	<div class=" my-[18px] grid grid-cols-1">
 		<!-- =solid container-->
-		<div
-			class="outline-3 z-20 flex h-7 w-[124px] translate-x-1  transform justify-center bg-secondary outline outline-secondary"
-		>
+		<div class="z-20 flex h-8 w-full transform place-items-center justify-center bg-secondary">
 			<!-- Logo text -->
 			<div class="-py-[0.5px] text-center font-fugaz text-[22px]  text-white">Indelvve</div>
 		</div>
 
 		<div
-			class="absolute z-10 -ml-1 mt-1 h-7 w-[124px] translate-x-1 transform outline-dotted   outline-[3px] outline-secondary"
+			class="absolute z-10 -ml-1 mt-1 h-8 w-[130px] -translate-x-[0.5px] transform border-[3px] border-dotted border-secondary"
 		/>
 		<!-- Log in section -->
 		<div
-			class="mt-4 flex justify-center  bg-white  font-medium text-black outline outline-1 outline-black"
+			class="mt-4 flex w-full justify-center bg-white  font-medium text-black outline outline-1 outline-black"
 		>
 			<div class="text-md flex py-1">
 				<button
@@ -39,7 +36,7 @@
 
 		<!-- Each menu header with icon net to it -->
 		<div
-			class="mt-4 grid grid-cols-1 gap-4 bg-white  py-2 pb-3 pl-3 outline outline-1 outline-black"
+			class="mt-4 grid w-full grid-cols-1 gap-4 bg-white  py-2 pb-3 pl-3 outline outline-1 outline-black"
 		>
 			<div class="flex items-center gap-2">
 				<svg

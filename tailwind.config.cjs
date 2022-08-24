@@ -11,7 +11,7 @@ module.exports = {
 				accent: '#E8F0F6',
 				mainDark: '#363e69',
 				mainLessDark: '#384275',
-				boxBackground: '#c0d8fa',
+				boxBackground: '#D4E6FD',
 
 				body: '#ffffff',
 				lighterBody: '#f0f5fa',
