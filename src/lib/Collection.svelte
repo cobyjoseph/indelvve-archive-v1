@@ -21,7 +21,7 @@
 	import { postsStore } from './stores/postsStore.js';
 	import AddCollectionBtnLight from '$lib/AddCollectionBtnLight.svelte';
 	import PostInputField from '$lib/PostInputField.svelte';
-	import { supabase } from '$lib/supabase.js';
+
 
 	$: direction = 'right';
 	$: currentCard = 0;

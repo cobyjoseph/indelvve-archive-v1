@@ -7,18 +7,13 @@
 	import { each } from 'svelte/internal';
 	import Topic from '$lib/Topic.svelte';
 	import { user } from '$lib/sessionStore';
-	import { supabase } from '$lib/supabase.js';
+
 
 	import Profile from '$lib/Profile.svelte';
 	import { isOverlayOpen } from '../lib/stores/LoginStore.js';
 	import LoginOverlay from '$lib/LoginOverlay.svelte';
 	import CreatePost from '$lib/CreatePost.svelte';
 
-	user.set(supabase.auth.user());
-
-	supabase.auth.onAuthStateChange((_, session) => {
-		user.set(session.user);
-	});
 
 	let testPost;
 	let showSignup = false;

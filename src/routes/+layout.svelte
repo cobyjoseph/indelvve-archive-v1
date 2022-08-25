@@ -1,9 +1,7 @@
 <script>
 	import '../app.css';
-	import { supabase } from '$lib/supabase.js';
-	console.log(supabase);
+
 	import { isOverlayOpen } from '../lib/stores/LoginStore.js';
-	import LoginOverlay from '../lib/LoginOverlay.svelte';
 </script>
 
 {#if isOverlayOpen}

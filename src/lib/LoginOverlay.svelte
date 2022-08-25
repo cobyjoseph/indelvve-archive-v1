@@ -1,27 +1,16 @@
 <script>
-	import { supabase } from '$lib/supabase.js';
+
 
 	let loading = false;
 	let email;
 
-	const handleLogin = async () => {
-		try {
-			loading = true;
-			const { error } = await supabase.auth.signIn({ email });
-			if (error) throw error;
-			alert('Check your email for the login link!');
-		} catch (error) {
-			alert(error.error_description || error.message);
-		} finally {
-			loading = false;
-		}
-	};
+
 </script>
 
 <div class="outline outline-2 outline-black mt-4 ">
 	<form
 		class="flex  bg-boxBackground gap-8"
-		on:submit|preventDefault={handleLogin}
+		on:submit|preventDefault={}
 	>
 		<h1 class="text-black font-semibold text-lg">Sign up</h1>
 		<div>
