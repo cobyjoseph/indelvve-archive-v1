@@ -1,5 +1,5 @@
 <script>
-	import { createPost, getUser } from '$lib/services.js';
+
 
 	let postContent = '';
 

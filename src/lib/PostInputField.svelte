@@ -1,5 +1,5 @@
 <script>
-	import { addPost } from './stores/postsStore.js';
+
 
 	let post;
 	let posts;
@@ -12,22 +12,22 @@
 		post = '';
 	};
 
-	// postsStore.subscribe((value) => {
-	// 	posts = value;
-	// });
+	postsStore.subscribe((value) => {
+		posts = value;
+	});
 
-	// function addContent() {
-	// 	postsStore.update((posts) => {
-	// 		return [
-	// 			...posts,
-	// 			{
-	// 				id: id,
-	// 				text: text,
-	// 				src: src
-	// 			}
-	// 		];
-	// 	});
-	// }
+	function addContent() {
+		postsStore.update((posts) => {
+			return [
+				...posts,
+				{
+					id: id,
+					text: text,
+					src: src
+				}
+			];
+		});
+	}
 </script>
 
 <div class="mb-5">

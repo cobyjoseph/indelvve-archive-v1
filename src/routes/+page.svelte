@@ -6,10 +6,10 @@
 	import { postsStore } from '../lib/stores/postsStore.js';
 	import { each } from 'svelte/internal';
 	import Topic from '$lib/Topic.svelte';
-	import { user } from '$lib/sessionStore';
+	
 
 
-	import Profile from '$lib/Profile.svelte';
+	
 	import { isOverlayOpen } from '../lib/stores/LoginStore.js';
 	import LoginOverlay from '$lib/LoginOverlay.svelte';
 	import CreatePost from '$lib/CreatePost.svelte';
@@ -20,13 +20,7 @@
 </script>
 
 
-<!-- <div class="container" style="padding: 50px 0 100px 0;">
-	{#if $user}
-		<Profile />
-	{:else}
-		<Auth />
-	{/if}
-</div> -->
+
 
 <div class="flex flex-grow justify-center ">
 	<Navbar />
@@ -39,13 +33,7 @@
 			<LoginOverlay />
 		{/if}
 
-		<!-- <div class="container" style="padding: 50px 0 100px 0;">
-			{#if $user}
-				<Profile />
-			{:else}
-				<Auth />
-			{/if}
-		</div> -->
+
 
 		<Topic />
 		<TopicHeader />

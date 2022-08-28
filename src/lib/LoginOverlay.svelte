@@ -1,13 +1,9 @@
 <script>
-
-
 	let loading = false;
 	let email;
-
-
 </script>
 
-<div class="outline outline-2 outline-black mt-4 ">
+<!-- <div class="outline outline-2 outline-black mt-4 ">
 	<form
 		class="flex  bg-boxBackground gap-8"
 		on:submit|preventDefault={}
@@ -30,4 +26,4 @@
 			/>
 		</div>
 	</form>
-</div>
+</div> -->
