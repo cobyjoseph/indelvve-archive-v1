@@ -20,7 +20,7 @@
 </script>
 
 
-
+<img src="../static/redox_01" alt="">
 
 <div class="flex flex-grow justify-center ">
 	<Navbar />
