@@ -22,7 +22,6 @@
 	import AddCollectionBtnLight from '$lib/AddCollectionBtnLight.svelte';
 	import PostInputField from '$lib/PostInputField.svelte';
 
-
 	$: direction = 'right';
 	$: currentCard = 0;
 
@@ -55,18 +54,8 @@
 	}
 </script>
 
-<!-- current count: {currentCard}
-prev count: {lastCard}
-{direction} -->
-
 <div class="relative">
-	<!-- Collection dotted outline -->
-	<div
-		style="--collectionHeight: {collectionHeight}"
-		class=" dottedOutline absolute z-10 mt-4 h-10 w-full -translate-x-2 translate-y-2 transform bg-secondary bg-opacity-50"
-	/>
-
-	<div bind:clientHeight={collectionHeight} class=" z-40 mt-4 mb-2   bg-boxBackground">
+	<div class="boxShadow mt-4 mb-2   bg-boxBackground">
 		<div class="px-5 pt-3">
 			<CollectionHeader />
 		</div>
@@ -185,10 +174,11 @@ prev count: {lastCard}
 	</div>
 </div>
 
-<!-- ____________________________________________________________________________________________________ -->
+<!-- current count: {currentCard}
+prev count: {lastCard}
+{direction} -->
 <style>
-	.dottedOutline {
-		--collectionHeight: 50;
-		height: calc(var(--collectionHeight) * 1px);
+	.boxShadow {
+		box-shadow: -8px 8px 0 0 #8ebaf8;
 	}
 </style>
