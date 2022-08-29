@@ -6,21 +6,16 @@
 	import { postsStore } from '../lib/stores/postsStore.js';
 	import { each } from 'svelte/internal';
 	import Topic from '$lib/Topic.svelte';
-	
 
-
-	
 	import { isOverlayOpen } from '../lib/stores/LoginStore.js';
 	import LoginOverlay from '$lib/LoginOverlay.svelte';
 	import CreatePost from '$lib/CreatePost.svelte';
-
 
 	let testPost;
 	let showSignup = false;
 </script>
 
-
-<img src="../static/redox_01" alt="">
+<img src="../static/redox_01" alt="" />
 
 <div class="flex flex-grow justify-center ">
 	<Navbar />
@@ -33,7 +28,7 @@
 			<LoginOverlay />
 		{/if}
 
-
+		test change
 
 		<Topic />
 		<TopicHeader />
